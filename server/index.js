@@ -1,3 +1,4 @@
+import {prepareShare} from './share.js';
 import http from 'node:http';
 import {networkError} from './network.js';
 import {createWelcome} from './welcome.js';
@@ -67,6 +68,7 @@ const server=http.createServer(async(req,res)=>{
    if(p==='/api/admin/maintenance'){const response=tx(()=>{const value=maintenance.update(tg.id,body);run('INSERT INTO requests VALUES(?,?,?,?,?)',tg.id,key,signature,JSON.stringify(value),Date.now());return value;});json(res,200,response);return;}
    if(!maintenance.allows(p,admin)){json(res,503,{error:maintenance.read().message,maintenance:maintenance.read()});return;}
    if(p==='/api/fairness/commit'){const result=tx(()=>fairness.commit(tg.id,body.clientSeed));json(res,200,result);return;}
+   if(p==='/api/share/prepare'){const row=get('SELECT data FROM cases WHERE id=?',body.caseId);check(row&&JSON.parse(row.data).freeType,'Выбери бесплатный кейс');await e.freeCheck(tg.id,JSON.parse(row.data),tg);const prepared=await prepareShare(telegram,tg.id,process.env.PUBLIC_URL);const value=tx(()=>{e.grantShare(tg.id,body.caseId);const value={id:prepared.id};run('INSERT INTO requests VALUES(?,?,?,?,?)',tg.id,key,signature,JSON.stringify(value),Date.now());return value;});json(res,200,value);return;}
    if(p==='/api/case'){const c=get('SELECT data FROM cases WHERE id=?',body.caseId);check(c,'Кейс не найден');await e.freeCheck(tg.id,JSON.parse(c.data),tg);}
    const handler=routes[p];check(handler,'Операция не найдена');
    const response=tx(()=>{check(!get('SELECT blocked FROM users WHERE id=?',tg.id).blocked,'Аккаунт заблокирован');check(maintenance.allows(p,admin),maintenance.read().message);e.tick();const value=fairness.execute(tg.id,p,body,()=>handler(tg.id,body));run('INSERT INTO requests VALUES(?,?,?,?,?)',tg.id,key,signature,JSON.stringify(value),Date.now());return value;});json(res,200,response);return;
