@@ -1,0 +1,371 @@
+[
+  {
+    "name": "DevSigned Spider TV",
+    "value": 66000,
+    "id": "unit-01",
+    "image": "images/units/unit-01.webp",
+    "imageSmall": "images/units/unit-01.webp",
+    "tier": 4,
+    "source": "dc1fc361cab75cb1a206716ee0b30560b0dca0a8a8846f30f0842c90aaf8c95f.webp"
+  },
+  {
+    "name": "DevSigned Engineer",
+    "value": 40000,
+    "id": "unit-02",
+    "image": "images/units/unit-02.webp",
+    "imageSmall": "images/units/unit-02.webp",
+    "tier": 4,
+    "source": "db1b88bfb1b6ae6a02e0b57b0317be91622b0e52846158e970e401ce4409527d.webp"
+  },
+  {
+    "name": "DevSigned Scientist",
+    "value": 24000,
+    "id": "unit-03",
+    "image": "images/units/unit-03.webp",
+    "imageSmall": "images/units/unit-03.webp",
+    "tier": 4,
+    "source": "b988f0a6858a5644659fdbe853ac4f805f6cb1707af6d0cb7acdce8e17a0f0dd.webp"
+  },
+  {
+    "name": "DevSigned UTC",
+    "value": 21750,
+    "id": "unit-04",
+    "image": "images/units/unit-04.webp",
+    "imageSmall": "images/units/unit-04.webp",
+    "tier": 4,
+    "source": "4502e52d1094eee24dde0583a4f4d6bb41b277dc9d095f1040ccaf81a76f39b0.webp"
+  },
+  {
+    "name": "DevSigned Pumpkin Farm",
+    "value": 18000,
+    "id": "unit-05",
+    "image": "images/units/unit-05.webp",
+    "imageSmall": "images/units/unit-05.webp",
+    "tier": 4,
+    "source": "f4a62465d12ed8d388c0b0792f15efe72d38cd4b10640cc05e5c1dcc1900d0aa.webp"
+  },
+  {
+    "name": "DevSigned UTSM",
+    "value": 17000,
+    "id": "unit-06",
+    "image": "images/units/unit-06.webp",
+    "imageSmall": "images/units/unit-06.webp",
+    "tier": 4,
+    "source": "f074e0d53349eb542389b02bc8c1cba43856ddde7668bb5ad4fdbbedc618c51d.webp"
+  },
+  {
+    "name": "DevSigned VideoTapper Prototype",
+    "value": 15000,
+    "id": "unit-07",
+    "image": "images/units/unit-07.webp",
+    "imageSmall": "images/units/unit-07.webp",
+    "tier": 4,
+    "source": "ee380d6de2782b7fa7624a1346f85cbc1ddbac070202c6627e96a9203a37a088.webp"
+  },
+  {
+    "name": "Spider TV",
+    "value": 10000,
+    "id": "unit-08",
+    "image": "images/units/unit-08.webp",
+    "imageSmall": "images/units/unit-08.webp",
+    "tier": 3,
+    "source": "dc1fc361cab75cb1a206716ee0b30560b0dca0a8a8846f30f0842c90aaf8c95f (1).webp"
+  },
+  {
+    "name": "Engineer Cameraman",
+    "value": 7000,
+    "id": "unit-09",
+    "image": "images/units/unit-09.webp",
+    "imageSmall": "images/units/unit-09.webp",
+    "tier": 3,
+    "source": "c6372f4491646037927e023b47c027f74f6940a07bf2a48f9d536c3ce813bd2d.webp"
+  },
+  {
+    "name": "Chaos Cameraman",
+    "value": 4200,
+    "id": "unit-10",
+    "image": "images/units/unit-10.webp",
+    "imageSmall": "images/units/unit-10.webp",
+    "tier": 3,
+    "source": "aab137395fe7e26225c883a02beaf7a89ffc035e48840ef4d5e0b6075e202c9f.webp"
+  },
+  {
+    "name": "Upgraded Titan Cameraman",
+    "value": 3500,
+    "id": "unit-11",
+    "image": "images/units/unit-11.webp",
+    "imageSmall": "images/units/unit-11.webp",
+    "tier": 3,
+    "source": "4502e52d1094eee24dde0583a4f4d6bb41b277dc9d095f1040ccaf81a76f39b0 (1).webp"
+  },
+  {
+    "name": "Premium Pass",
+    "value": 1500,
+    "id": "unit-12",
+    "image": "images/units/unit-12.webp",
+    "imageSmall": "images/units/unit-12.webp",
+    "tier": 3,
+    "source": "0dfedd52ec00c343861f78ac658297ce13fc5fcfcc8939d8530aa358130a2887.webp"
+  },
+  {
+    "name": "Executioner TV Man",
+    "value": 1350,
+    "id": "unit-13",
+    "image": "images/units/unit-13.webp",
+    "imageSmall": "images/units/unit-13.webp",
+    "tier": 3,
+    "source": "8cfa18cde3f75d6ef4541572712c5b7a2f06c03b67cded507c19c7e610c91121.webp"
+  },
+  {
+    "name": "2x Lucky",
+    "value": 1100,
+    "id": "unit-14",
+    "image": "images/units/unit-14.webp",
+    "imageSmall": "images/units/unit-14.webp",
+    "tier": 3,
+    "source": "d0652947941d09c6d755414d836d73d941d288ab2765eafc63eea143c8254479.webp"
+  },
+  {
+    "name": "2x Money",
+    "value": 1020,
+    "id": "unit-15",
+    "image": "images/units/unit-15.webp",
+    "imageSmall": "images/units/unit-15.webp",
+    "tier": 3,
+    "source": "0848ac8e70d0089fa17a07ebbb1099220127ba3edd5d6c759fe44b5933c4f720.webp"
+  },
+  {
+    "name": "x2 Candy",
+    "value": 925,
+    "id": "unit-16",
+    "image": "images/units/unit-16.webp",
+    "imageSmall": "images/units/unit-16.webp",
+    "tier": 2,
+    "source": "b5a799674568a354c66c98d650e82bf087002a023bc2c27c3bc15e6ffbda256b.webp"
+  },
+  {
+    "name": "Large Scientist Cameraman",
+    "value": 575,
+    "id": "unit-17",
+    "image": "images/units/unit-17.webp",
+    "imageSmall": "images/units/unit-17.webp",
+    "tier": 2,
+    "source": "f9c91061b8260ec6f180414470ee8967dd84aad01c9e550b2b94d799175284a0.webp"
+  },
+  {
+    "name": "Jetpack Cameraman",
+    "value": 570,
+    "id": "unit-18",
+    "image": "images/units/unit-18.webp",
+    "imageSmall": "images/units/unit-18.webp",
+    "tier": 2,
+    "source": "bb2cddbb28d1454d43ead2297f0603428d26674a4516c96d028853fdd9fbd7b1.webp"
+  },
+  {
+    "name": "Headless TV Man",
+    "value": 525,
+    "id": "unit-19",
+    "image": "images/units/unit-19.webp",
+    "imageSmall": "images/units/unit-19.webp",
+    "tier": 2,
+    "source": "688505608418af7feff9d5d79b0ba007e1f00d51a1064136b643d93fed1a77dd.webp"
+  },
+  {
+    "name": "2x Speed",
+    "value": 520,
+    "id": "unit-20",
+    "image": "images/units/unit-20.webp",
+    "imageSmall": "images/units/unit-20.webp",
+    "tier": 2,
+    "source": "8941af3600b237a7c882c5c46363d34d60ef9eb9ed09ea7e912c191704cfb08c.webp"
+  },
+  {
+    "name": "CinemaMan Titan",
+    "value": 315,
+    "id": "unit-21",
+    "image": "images/units/unit-21.webp",
+    "imageSmall": "images/units/unit-21.webp",
+    "tier": 2,
+    "source": "9abeef4b9078903f74e2fad881994c16684641f69db56eeb0ed4b22ef0be61d1.webp"
+  },
+  {
+    "name": "TV Woman",
+    "value": 300,
+    "id": "unit-22",
+    "image": "images/units/unit-22.webp",
+    "imageSmall": "images/units/unit-22.webp",
+    "tier": 2,
+    "source": "81efa62b74fe158f686b1cbab063179458525e6e866b0750fdb021e67349202a.webp"
+  },
+  {
+    "name": "Scientist Crate",
+    "value": 275,
+    "id": "unit-23",
+    "image": "images/units/unit-23.webp",
+    "imageSmall": "images/units/unit-23.webp",
+    "tier": 2,
+    "source": "c08f09d46db397c0a2cd7ab3c4407153177e8dc7743f7dd938d874660504515b.webp"
+  },
+  {
+    "name": "Glitch Plungerman",
+    "value": 235,
+    "id": "unit-24",
+    "image": "images/units/unit-24.webp",
+    "imageSmall": "images/units/unit-24.webp",
+    "tier": 2,
+    "source": "2b905823ba5c987940c5526e75bccb61e629d1605ab5319884c1720b9914f4aa.webp"
+  },
+  {
+    "name": "Large Prototype Titan",
+    "value": 235,
+    "id": "unit-25",
+    "image": "images/units/unit-25.webp",
+    "imageSmall": "images/units/unit-25.webp",
+    "tier": 2,
+    "source": "4dbcfbedde29eb378d4695d691526cfdab982a9fd501dfebdfa6b903b90f9aee.webp"
+  },
+  {
+    "name": "VideoTaper Titan",
+    "value": 225,
+    "id": "unit-26",
+    "image": "images/units/unit-26.webp",
+    "imageSmall": "images/units/unit-26.webp",
+    "tier": 2,
+    "source": "ee380d6de2782b7fa7624a1346f85cbc1ddbac070202c6627e96a9203a37a088 (1).webp"
+  },
+  {
+    "name": "Upgraded Titan Speakerman",
+    "value": 200,
+    "id": "unit-27",
+    "image": "images/units/unit-27.webp",
+    "imageSmall": "images/units/unit-27.webp",
+    "tier": 2,
+    "source": "b9a9e2d10a725be20c3c9dc2454519ca42dc0737642daa9908c9c844f7fcff40.webp"
+  },
+  {
+    "name": "Spider Crate",
+    "value": 70,
+    "id": "unit-28",
+    "image": "images/units/unit-28.webp",
+    "imageSmall": "images/units/unit-28.webp",
+    "tier": 1,
+    "source": "2d93fd3c80fafa5842a5d07b87ecd717fbc553949646157e5c7c243a95f55b8d.webp"
+  },
+  {
+    "name": "Pumpkin Farmer",
+    "value": 65,
+    "id": "unit-29",
+    "image": "images/units/unit-29.webp",
+    "imageSmall": "images/units/unit-29.webp",
+    "tier": 1,
+    "source": "f4a62465d12ed8d388c0b0792f15efe72d38cd4b10640cc05e5c1dcc1900d0aa (1).webp"
+  },
+  {
+    "name": "Scientist Cameraman",
+    "value": 50,
+    "id": "unit-30",
+    "image": "images/units/unit-30.webp",
+    "imageSmall": "images/units/unit-30.webp",
+    "tier": 1,
+    "source": "b988f0a6858a5644659fdbe853ac4f805f6cb1707af6d0cb7acdce8e17a0f0dd (1).webp"
+  },
+  {
+    "name": "Camera Repair Drone",
+    "value": 35,
+    "id": "unit-31",
+    "image": "images/units/unit-31.webp",
+    "imageSmall": "images/units/unit-31.webp",
+    "tier": 1,
+    "source": "2ad114cc5124a64861073607c41a0f19d75813297064dcdd3fc5682f15f44c69.webp"
+  },
+  {
+    "name": "Camera Spider",
+    "value": 15,
+    "id": "unit-32",
+    "image": "images/units/unit-32.webp",
+    "imageSmall": "images/units/unit-32.webp",
+    "tier": 0,
+    "source": "1a1dc2b4ec818fdbef8b1b45af2e2f10ef0fa6b6bab3e5503897150a0e1f43c7.webp"
+  },
+  {
+    "name": "Halloween Crate",
+    "value": 15,
+    "id": "unit-33",
+    "image": "images/units/unit-33.webp",
+    "imageSmall": "images/units/unit-33.webp",
+    "tier": 0,
+    "source": "2cea74b96a52c7ef40dfa18948d591f16c87c18e3f8269b3874e634ab7fe27c5.webp"
+  },
+  {
+    "name": "Dragon Cameraman",
+    "value": 13,
+    "id": "unit-34",
+    "image": "images/units/unit-34.webp",
+    "imageSmall": "images/units/unit-34.webp",
+    "tier": 0,
+    "source": "e1d6c96ca90c5ba743bf3f17ef0f8f6d5cef382b3bf71eea2dea3ff21cbfbe54.webp"
+  },
+  {
+    "name": "Woman Crate",
+    "value": 10,
+    "id": "unit-35",
+    "image": "images/units/unit-35.webp",
+    "imageSmall": "images/units/unit-35.webp",
+    "tier": 0,
+    "source": "49c9dc293bab04248ba16049a30de3e935b324987d6039ba075772c95317bd14.webp"
+  },
+  {
+    "name": "SpeakerWoman",
+    "value": 8,
+    "id": "unit-36",
+    "image": "images/units/unit-36.webp",
+    "imageSmall": "images/units/unit-36.webp",
+    "tier": 0,
+    "source": "283294316c933b862389f8299c5c78324bd92ea3434b949f9dd38af100d917b8.webp"
+  },
+  {
+    "name": "Laser Cameraman Car",
+    "value": 5,
+    "id": "unit-37",
+    "image": "images/units/unit-37.webp",
+    "imageSmall": "images/units/unit-37.webp",
+    "tier": 0,
+    "source": "113ad8fd6dc1694251696023d99cc250602d801190ff76be0ce0dfe8abc7cfca.webp"
+  },
+  {
+    "name": "Ninja Cameraman",
+    "value": 5,
+    "id": "unit-38",
+    "image": "images/units/unit-38.webp",
+    "imageSmall": "images/units/unit-38.webp",
+    "tier": 0,
+    "source": "93588b894fcd16d1266338da788a5f0a46f5a925efd74e9fd098af3e0b7eafdd.webp"
+  },
+  {
+    "name": "Titan Cameraman",
+    "value": 5,
+    "id": "unit-39",
+    "image": "images/units/unit-39.webp",
+    "imageSmall": "images/units/unit-39.webp",
+    "tier": 0,
+    "source": "2813bfc279ec6b09d79843be0fb9a118a871905dbeeae1083e555605cbb99054.webp"
+  },
+  {
+    "name": "Titan Speakerman",
+    "value": 5,
+    "id": "unit-40",
+    "image": "images/units/unit-40.webp",
+    "imageSmall": "images/units/unit-40.webp",
+    "tier": 0,
+    "source": "95fda52f361a7ef2b9157517c65a5aab3c7fa002110ca7d64be1d9ad3cbea61c.webp"
+  },
+  {
+    "name": "Titan TV Man",
+    "value": 5,
+    "id": "unit-41",
+    "image": "images/units/unit-41.webp",
+    "imageSmall": "images/units/unit-41.webp",
+    "tier": 0,
+    "source": "94da9586b9ff2d38f655bca07cf7a29a45ba15452c8079baf253fc349708c7bc.webp"
+  }
+]

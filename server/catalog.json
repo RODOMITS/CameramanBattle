@@ -1,0 +1,727 @@
+{
+  "items": [
+    {
+      "name": "DevSigned Spider TV",
+      "value": 66000,
+      "id": "unit-01",
+      "image": "images/units/unit-01.webp",
+      "imageSmall": "images/units/unit-01.webp",
+      "tier": 4
+    },
+    {
+      "name": "DevSigned Engineer",
+      "value": 40000,
+      "id": "unit-02",
+      "image": "images/units/unit-02.webp",
+      "imageSmall": "images/units/unit-02.webp",
+      "tier": 4
+    },
+    {
+      "name": "DevSigned Scientist",
+      "value": 24000,
+      "id": "unit-03",
+      "image": "images/units/unit-03.webp",
+      "imageSmall": "images/units/unit-03.webp",
+      "tier": 4
+    },
+    {
+      "name": "DevSigned UTC",
+      "value": 21750,
+      "id": "unit-04",
+      "image": "images/units/unit-04.webp",
+      "imageSmall": "images/units/unit-04.webp",
+      "tier": 4
+    },
+    {
+      "name": "DevSigned Pumpkin Farm",
+      "value": 18000,
+      "id": "unit-05",
+      "image": "images/units/unit-05.webp",
+      "imageSmall": "images/units/unit-05.webp",
+      "tier": 4
+    },
+    {
+      "name": "DevSigned UTSM",
+      "value": 17000,
+      "id": "unit-06",
+      "image": "images/units/unit-06.webp",
+      "imageSmall": "images/units/unit-06.webp",
+      "tier": 4
+    },
+    {
+      "name": "DevSigned VideoTapper Prototype",
+      "value": 15000,
+      "id": "unit-07",
+      "image": "images/units/unit-07.webp",
+      "imageSmall": "images/units/unit-07.webp",
+      "tier": 4
+    },
+    {
+      "name": "Spider TV",
+      "value": 10000,
+      "id": "unit-08",
+      "image": "images/units/unit-08.webp",
+      "imageSmall": "images/units/unit-08.webp",
+      "tier": 3
+    },
+    {
+      "name": "Engineer Cameraman",
+      "value": 7000,
+      "id": "unit-09",
+      "image": "images/units/unit-09.webp",
+      "imageSmall": "images/units/unit-09.webp",
+      "tier": 3
+    },
+    {
+      "name": "Chaos Cameraman",
+      "value": 4200,
+      "id": "unit-10",
+      "image": "images/units/unit-10.webp",
+      "imageSmall": "images/units/unit-10.webp",
+      "tier": 3
+    },
+    {
+      "name": "Upgraded Titan Cameraman",
+      "value": 3500,
+      "id": "unit-11",
+      "image": "images/units/unit-11.webp",
+      "imageSmall": "images/units/unit-11.webp",
+      "tier": 3
+    },
+    {
+      "name": "Premium Pass",
+      "value": 1500,
+      "id": "unit-12",
+      "image": "images/units/unit-12.webp",
+      "imageSmall": "images/units/unit-12.webp",
+      "tier": 3
+    },
+    {
+      "name": "Executioner TV Man",
+      "value": 1350,
+      "id": "unit-13",
+      "image": "images/units/unit-13.webp",
+      "imageSmall": "images/units/unit-13.webp",
+      "tier": 3
+    },
+    {
+      "name": "2x Lucky",
+      "value": 1100,
+      "id": "unit-14",
+      "image": "images/units/unit-14.webp",
+      "imageSmall": "images/units/unit-14.webp",
+      "tier": 3
+    },
+    {
+      "name": "2x Money",
+      "value": 1020,
+      "id": "unit-15",
+      "image": "images/units/unit-15.webp",
+      "imageSmall": "images/units/unit-15.webp",
+      "tier": 3
+    },
+    {
+      "name": "x2 Candy",
+      "value": 925,
+      "id": "unit-16",
+      "image": "images/units/unit-16.webp",
+      "imageSmall": "images/units/unit-16.webp",
+      "tier": 2
+    },
+    {
+      "name": "Large Scientist Cameraman",
+      "value": 575,
+      "id": "unit-17",
+      "image": "images/units/unit-17.webp",
+      "imageSmall": "images/units/unit-17.webp",
+      "tier": 2
+    },
+    {
+      "name": "Jetpack Cameraman",
+      "value": 570,
+      "id": "unit-18",
+      "image": "images/units/unit-18.webp",
+      "imageSmall": "images/units/unit-18.webp",
+      "tier": 2
+    },
+    {
+      "name": "Headless TV Man",
+      "value": 525,
+      "id": "unit-19",
+      "image": "images/units/unit-19.webp",
+      "imageSmall": "images/units/unit-19.webp",
+      "tier": 2
+    },
+    {
+      "name": "2x Speed",
+      "value": 520,
+      "id": "unit-20",
+      "image": "images/units/unit-20.webp",
+      "imageSmall": "images/units/unit-20.webp",
+      "tier": 2
+    },
+    {
+      "name": "CinemaMan Titan",
+      "value": 315,
+      "id": "unit-21",
+      "image": "images/units/unit-21.webp",
+      "imageSmall": "images/units/unit-21.webp",
+      "tier": 2
+    },
+    {
+      "name": "TV Woman",
+      "value": 300,
+      "id": "unit-22",
+      "image": "images/units/unit-22.webp",
+      "imageSmall": "images/units/unit-22.webp",
+      "tier": 2
+    },
+    {
+      "name": "Scientist Crate",
+      "value": 275,
+      "id": "unit-23",
+      "image": "images/units/unit-23.webp",
+      "imageSmall": "images/units/unit-23.webp",
+      "tier": 2
+    },
+    {
+      "name": "Glitch Plungerman",
+      "value": 235,
+      "id": "unit-24",
+      "image": "images/units/unit-24.webp",
+      "imageSmall": "images/units/unit-24.webp",
+      "tier": 2
+    },
+    {
+      "name": "Large Prototype Titan",
+      "value": 235,
+      "id": "unit-25",
+      "image": "images/units/unit-25.webp",
+      "imageSmall": "images/units/unit-25.webp",
+      "tier": 2
+    },
+    {
+      "name": "VideoTaper Titan",
+      "value": 225,
+      "id": "unit-26",
+      "image": "images/units/unit-26.webp",
+      "imageSmall": "images/units/unit-26.webp",
+      "tier": 2
+    },
+    {
+      "name": "Upgraded Titan Speakerman",
+      "value": 200,
+      "id": "unit-27",
+      "image": "images/units/unit-27.webp",
+      "imageSmall": "images/units/unit-27.webp",
+      "tier": 2
+    },
+    {
+      "name": "Spider Crate",
+      "value": 70,
+      "id": "unit-28",
+      "image": "images/units/unit-28.webp",
+      "imageSmall": "images/units/unit-28.webp",
+      "tier": 1
+    },
+    {
+      "name": "Pumpkin Farmer",
+      "value": 65,
+      "id": "unit-29",
+      "image": "images/units/unit-29.webp",
+      "imageSmall": "images/units/unit-29.webp",
+      "tier": 1
+    },
+    {
+      "name": "Scientist Cameraman",
+      "value": 50,
+      "id": "unit-30",
+      "image": "images/units/unit-30.webp",
+      "imageSmall": "images/units/unit-30.webp",
+      "tier": 1
+    },
+    {
+      "name": "Camera Repair Drone",
+      "value": 35,
+      "id": "unit-31",
+      "image": "images/units/unit-31.webp",
+      "imageSmall": "images/units/unit-31.webp",
+      "tier": 1
+    },
+    {
+      "name": "Camera Spider",
+      "value": 15,
+      "id": "unit-32",
+      "image": "images/units/unit-32.webp",
+      "imageSmall": "images/units/unit-32.webp",
+      "tier": 0
+    },
+    {
+      "name": "Halloween Crate",
+      "value": 15,
+      "id": "unit-33",
+      "image": "images/units/unit-33.webp",
+      "imageSmall": "images/units/unit-33.webp",
+      "tier": 0
+    },
+    {
+      "name": "Dragon Cameraman",
+      "value": 13,
+      "id": "unit-34",
+      "image": "images/units/unit-34.webp",
+      "imageSmall": "images/units/unit-34.webp",
+      "tier": 0
+    },
+    {
+      "name": "Woman Crate",
+      "value": 10,
+      "id": "unit-35",
+      "image": "images/units/unit-35.webp",
+      "imageSmall": "images/units/unit-35.webp",
+      "tier": 0
+    },
+    {
+      "name": "SpeakerWoman",
+      "value": 8,
+      "id": "unit-36",
+      "image": "images/units/unit-36.webp",
+      "imageSmall": "images/units/unit-36.webp",
+      "tier": 0
+    },
+    {
+      "name": "Laser Cameraman Car",
+      "value": 5,
+      "id": "unit-37",
+      "image": "images/units/unit-37.webp",
+      "imageSmall": "images/units/unit-37.webp",
+      "tier": 0
+    },
+    {
+      "name": "Ninja Cameraman",
+      "value": 5,
+      "id": "unit-38",
+      "image": "images/units/unit-38.webp",
+      "imageSmall": "images/units/unit-38.webp",
+      "tier": 0
+    },
+    {
+      "name": "Titan Cameraman",
+      "value": 5,
+      "id": "unit-39",
+      "image": "images/units/unit-39.webp",
+      "imageSmall": "images/units/unit-39.webp",
+      "tier": 0
+    },
+    {
+      "name": "Titan Speakerman",
+      "value": 5,
+      "id": "unit-40",
+      "image": "images/units/unit-40.webp",
+      "imageSmall": "images/units/unit-40.webp",
+      "tier": 0
+    },
+    {
+      "name": "Titan TV Man",
+      "value": 5,
+      "id": "unit-41",
+      "image": "images/units/unit-41.webp",
+      "imageSmall": "images/units/unit-41.webp",
+      "tier": 0
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-patrol",
+      "name": "Патруль",
+      "price": 12,
+      "category": "paid",
+      "image": "images/units/unit-28.webp",
+      "drops": [
+        {
+          "id": "unit-41",
+          "weight": 0.9860706714461628
+        },
+        {
+          "id": "unit-40",
+          "weight": 0.9860706714461628
+        },
+        {
+          "id": "unit-39",
+          "weight": 0.9860706714461628
+        },
+        {
+          "id": "unit-38",
+          "weight": 0.9860706714461628
+        },
+        {
+          "id": "unit-37",
+          "weight": 0.9860706714461628
+        },
+        {
+          "id": "unit-36",
+          "weight": 0.9778063807058134
+        },
+        {
+          "id": "unit-35",
+          "weight": 0.9723353690862863
+        },
+        {
+          "id": "unit-34",
+          "weight": 0.9641861943669235
+        },
+        {
+          "id": "unit-33",
+          "weight": 0.9587913902657667
+        },
+        {
+          "id": "unit-32",
+          "weight": 0.9587913902657667
+        },
+        {
+          "id": "unit-31",
+          "weight": 0.9064759639398494
+        }
+      ]
+    },
+    {
+      "id": "case-reinforcement",
+      "name": "Подкрепление",
+      "price": 50,
+      "category": "paid",
+      "image": "images/units/unit-33.webp",
+      "drops": [
+        {
+          "id": "unit-41",
+          "weight": 0.9974044655488596
+        },
+        {
+          "id": "unit-38",
+          "weight": 0.9974044655488596
+        },
+        {
+          "id": "unit-36",
+          "weight": 0.9958503796618331
+        },
+        {
+          "id": "unit-34",
+          "weight": 0.9932656156932397
+        },
+        {
+          "id": "unit-32",
+          "weight": 0.992233589558246
+        },
+        {
+          "id": "unit-31",
+          "weight": 0.981972121213036
+        },
+        {
+          "id": "unit-30",
+          "weight": 0.9743457226773358
+        },
+        {
+          "id": "unit-29",
+          "weight": 0.9667785538828562
+        },
+        {
+          "id": "unit-28",
+          "weight": 0.9642692468396296
+        },
+        {
+          "id": "unit-27",
+          "weight": 0.9012646389059582
+        }
+      ]
+    },
+    {
+      "id": "case-laboratory",
+      "name": "Лаборатория",
+      "price": 200,
+      "category": "paid",
+      "image": "images/units/unit-23.webp",
+      "drops": [
+        {
+          "id": "unit-40",
+          "weight": 0.9992979027930471
+        },
+        {
+          "id": "unit-36",
+          "weight": 0.9988768811024649
+        },
+        {
+          "id": "unit-32",
+          "weight": 0.997895186854513
+        },
+        {
+          "id": "unit-30",
+          "weight": 0.9930011687723591
+        },
+        {
+          "id": "unit-29",
+          "weight": 0.9909110868588431
+        },
+        {
+          "id": "unit-27",
+          "weight": 0.9722972080072746
+        },
+        {
+          "id": "unit-26",
+          "weight": 0.9688887617196632
+        },
+        {
+          "id": "unit-25",
+          "weight": 0.9675287311372592
+        },
+        {
+          "id": "unit-24",
+          "weight": 0.9675287311372592
+        },
+        {
+          "id": "unit-23",
+          "weight": 0.9621076727980293
+        },
+        {
+          "id": "unit-21",
+          "weight": 0.9567169886198672
+        },
+        {
+          "id": "unit-17",
+          "weight": 0.9224062482441828
+        }
+      ]
+    },
+    {
+      "id": "case-titan",
+      "name": "Протокол Titan",
+      "price": 800,
+      "category": "paid",
+      "image": "images/units/unit-39.webp",
+      "drops": [
+        {
+          "id": "unit-41",
+          "weight": 0.998928461019507
+        },
+        {
+          "id": "unit-40",
+          "weight": 0.998928461019507
+        },
+        {
+          "id": "unit-39",
+          "weight": 0.998928461019507
+        },
+        {
+          "id": "unit-27",
+          "weight": 0.9580219973294458
+        },
+        {
+          "id": "unit-26",
+          "weight": 0.952900195945533
+        },
+        {
+          "id": "unit-25",
+          "weight": 0.9508591506525732
+        },
+        {
+          "id": "unit-21",
+          "weight": 0.9346873881755694
+        },
+        {
+          "id": "unit-19",
+          "weight": 0.8935330851802863
+        },
+        {
+          "id": "unit-11",
+          "weight": 0.4721401345728375
+        },
+        {
+          "id": "unit-10",
+          "weight": 0.40633581504335436
+        },
+        {
+          "id": "unit-09",
+          "weight": 0.22291630667445708
+        }
+      ]
+    },
+    {
+      "id": "case-engineer",
+      "name": "Инженерный корпус",
+      "price": 2000,
+      "category": "paid",
+      "image": "images/units/unit-09.webp",
+      "drops": [
+        {
+          "id": "unit-41",
+          "weight": 0.999165290966162
+        },
+        {
+          "id": "unit-32",
+          "weight": 0.997497962534425
+        },
+        {
+          "id": "unit-30",
+          "weight": 0.9916841932372266
+        },
+        {
+          "id": "unit-17",
+          "weight": 0.9084352875282131
+        },
+        {
+          "id": "unit-11",
+          "weight": 0.5573620121167282
+        },
+        {
+          "id": "unit-10",
+          "weight": 0.49586657928537337
+        },
+        {
+          "id": "unit-09",
+          "weight": 0.3106524125508079
+        },
+        {
+          "id": "unit-08",
+          "weight": 0.18822538180342513
+        },
+        {
+          "id": "unit-07",
+          "weight": 0.08166148629747935
+        },
+        {
+          "id": "unit-02",
+          "weight": 0.00125519946945208
+        }
+      ]
+    },
+    {
+      "id": "case-signed",
+      "name": "DevSigned",
+      "price": 6500,
+      "category": "paid",
+      "image": "images/units/unit-01.webp",
+      "drops": [
+        {
+          "id": "unit-41",
+          "weight": 0.9993544320155129
+        },
+        {
+          "id": "unit-11",
+          "weight": 0.6363264779399338
+        },
+        {
+          "id": "unit-09",
+          "weight": 0.4049113865274411
+        },
+        {
+          "id": "unit-08",
+          "weight": 0.27484364505444503
+        },
+        {
+          "id": "unit-07",
+          "weight": 0.1440882442691692
+        },
+        {
+          "id": "unit-06",
+          "weight": 0.11128732139725118
+        },
+        {
+          "id": "unit-05",
+          "weight": 0.09780346906038384
+        },
+        {
+          "id": "unit-04",
+          "weight": 0.06025753986080544
+        },
+        {
+          "id": "unit-03",
+          "weight": 0.04506150360988594
+        },
+        {
+          "id": "unit-02",
+          "weight": 0.005706144936529426
+        },
+        {
+          "id": "unit-01",
+          "weight": 0.00019859376878446816
+        }
+      ]
+    },
+    {
+      "id": "case-subscribe",
+      "name": "За подписку",
+      "price": 0,
+      "freeType": "subscribe",
+      "category": "free",
+      "image": "images/units/unit-35.webp",
+      "drops": [
+        {
+          "id": "unit-41",
+          "weight": 0.2878375472760866
+        },
+        {
+          "id": "unit-36",
+          "weight": 0.1363439627964919
+        },
+        {
+          "id": "unit-35",
+          "weight": 0.0828504536219134
+        },
+        {
+          "id": "unit-32",
+          "weight": 0.02384747136124272
+        }
+      ]
+    },
+    {
+      "id": "case-username",
+      "name": "За имя",
+      "price": 0,
+      "freeType": "username",
+      "category": "free",
+      "image": "images/units/unit-35.webp",
+      "drops": [
+        {
+          "id": "unit-41",
+          "weight": 0.2878375472760866
+        },
+        {
+          "id": "unit-36",
+          "weight": 0.1363439627964919
+        },
+        {
+          "id": "unit-35",
+          "weight": 0.0828504536219134
+        },
+        {
+          "id": "unit-32",
+          "weight": 0.02384747136124272
+        }
+      ]
+    },
+    {
+      "id": "case-referral",
+      "name": "По приглашению",
+      "price": 0,
+      "freeType": "referral",
+      "category": "free",
+      "image": "images/units/unit-35.webp",
+      "drops": [
+        {
+          "id": "unit-41",
+          "weight": 0.2878375472760866
+        },
+        {
+          "id": "unit-36",
+          "weight": 0.1363439627964919
+        },
+        {
+          "id": "unit-35",
+          "weight": 0.0828504536219134
+        },
+        {
+          "id": "unit-32",
+          "weight": 0.02384747136124272
+        }
+      ]
+    }
+  ],
+  "coinRewards": []
+}
