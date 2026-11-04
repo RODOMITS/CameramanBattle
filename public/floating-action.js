@@ -9,7 +9,7 @@
   scheduled=false;
   const header=document.querySelector('header'),headerHeight=header?.getBoundingClientRect().height||0;
   const heightValue=headerHeight+'px';if(document.documentElement.style.getPropertyValue('--fixed-header-height')!==heightValue)document.documentElement.style.setProperty('--fixed-header-height',heightValue);
-  if(uiPrefs.floatingButton===false){dock.hidden=true;source=null;return;}
+  if(uiPrefs.floatingButton===false||document.body.classList.contains('drawer-open')||document.body.classList.contains('drawer-closing')){dock.hidden=true;source=null;return;}
   const modal=document.querySelector('#modal'),modalOpen=modal&&!modal.hidden;
   source=modalOpen?modal.querySelector('#caseOpen'):document.querySelector('#main #upgradeGo,#main [data-action="roll-dice"],#main #mineAction,#main [data-action="mine-start"],#main #crashAction,#main [data-action="crash"]');
   if(!source||!source.isConnected||source.offsetParent===null){dock.hidden=true;return;}
@@ -27,6 +27,7 @@
  button.addEventListener('click',e=>{e.stopImmediatePropagation();e.preventDefault();if(source?.isConnected&&!source.disabled)source.click();schedule();});
  const observer=new MutationObserver(schedule);
  for(const selector of ['#main','#modal']){const el=document.querySelector(selector);if(el)observer.observe(el,{childList:true,subtree:true,attributes:true,attributeFilter:['disabled','hidden','class','aria-pressed'],characterData:true});}
+ observer.observe(document.body,{attributes:true,attributeFilter:['class']});
  addEventListener('scroll',schedule,{passive:true,capture:true});addEventListener('resize',schedule,{passive:true});
  window.visualViewport?.addEventListener('resize',schedule,{passive:true});
  schedule();

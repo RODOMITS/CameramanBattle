@@ -2,6 +2,7 @@
 let serverState=null,serverConfig={},serverPending=false,serverAdmin=false,serverOffset=0;
 const serverTG=window.Telegram?.WebApp;
 serverTG?.ready();serverTG?.expand();
+try{serverTG?.setHeaderColor?.('#10141b');serverTG?.setBackgroundColor?.('#0c0e12');if(serverTG?.isVersionAtLeast?.('7.10')){serverTG.setBottomBarColor?.('#111721');serverTG.disableVerticalSwipes?.();}}catch{}
 const serverNow=()=>Date.now()+serverOffset;
 const serverDate=t=>new Date(t).toLocaleString('ru-RU',{timeZone:'Europe/Moscow',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
 async function serverAPI(path,body){const response=await fetch(path,{method:body===undefined?'GET':'POST',headers:{'Content-Type':'application/json',Authorization:'tma '+(serverTG?.initData||''),...(serverConfig.dev?{'X-Dev-User':sessionStorage.getItem('dev-id')||'8911524524'}:{}),...(body===undefined?{}:{'Idempotency-Key':crypto.randomUUID()})},...(body===undefined?{}:{body:JSON.stringify(body)})});const data=await response.json();if(!response.ok)throw new Error(data.error||'Ошибка сервера');return data;}
@@ -27,13 +28,13 @@ currentPartner=()=>serverState?.partner?.active?serverState.partner:null;
 referralRates=()=>({referralPercent:serverState?.partner?.percent||5,promoBonus:0,partnerBonus:0});
 referralRows=()=>[];
 log=function(){};recordGameResult=function(){};
-cashbackSnapshot=()=>({...bonusWindow(),available:(serverState?.cashback.available||0)/100,pending:0,claimed:0});
+cashbackSnapshot=()=>({open:!!serverState?.cashback?.open,available:(serverState?.cashback?.available||0)/100,percent:serverState?.cashback?.percent||0,pending:0,claimed:0});
 claimCashback=()=>serverDo('/api/cashback',{});
 refTransfer=()=>serverDo('/api/partner/transfer',{});
 redeemUserPromo=()=>serverDo('/api/promo',{code:$('#redeemCode')?.value||''});
 createUserPromo=()=>toast('Создание промокодов доступно в админке');
-freeCaseStatus=function(c,at=serverNow()){const claim=state.freeCaseClaims?.[c.id];if(c.freeType==='referral'){const ready=!!serverState?.user.referrer&&!claim;return {ready,condition:!!serverState?.user.referrer,label:claim?'Уже получен':ready?'Открыть бесплатно':'Только по приглашению партнёра'};}const next=claim?claim.at+21600000:0;return {ready:next<=at,condition:true,next:next>at?next:null,label:next>at?'Через '+countdown(next):'Открыть бесплатно'};};
-caseControls=function(c){if(!c.freeType)return baseCustomControls(c);const f=freeCaseStatus(c);return `<div class="free-case-condition"><strong>${c.freeType==='subscribe'?'Подписка на @cameraman_battle':c.freeType==='username'?'@cameraman_battle_bot в имени или фамилии':'Первый вход по ссылке партнёра'}</strong><small>Условие проверяется сервером при открытии.</small></div><button class="btn wide" id="caseOpen" data-open="${c.id}" data-free-case-timer="${c.id}" ${f.ready?'':'disabled'}>${esc(f.label)}</button>`;};
+freeCaseStatus=function(c,at=serverNow()){const claim=state.freeCaseClaims?.[c.id];if(c.freeType==='referral'){const ready=!!serverState?.user.referrer&&!claim;return {ready,condition:!!serverState?.user.referrer,label:claim?'Уже получен':ready?'Открыть бесплатно':'По приглашению'};}const next=claim?claim.at+21600000:0;return {ready:next<=at,condition:true,next:next>at?next:null,label:next>at?'Через '+countdown(next):'Открыть бесплатно'};};
+caseControls=function(c){if(!c.freeType)return baseCustomControls(c);const f=freeCaseStatus(c);return `<div class="free-case-condition"><strong>${c.freeType==='subscribe'?'Подписка на @cameraman_battle':c.freeType==='username'?'@cameraman_battle_bot в имени или фамилии':'Первый вход по ссылке партнёра'}</strong><small></small></div><button class="btn wide" id="caseOpen" data-open="${c.id}" data-free-case-timer="${c.id}" ${f.ready?'':'disabled'}>${esc(f.label)}</button>`;};
 let serverWinners=null;
 settleCaseBatch=function(){const winners=serverWinners;serverWinners=null;return winners;};
 rollCase=async function(id){if(busy)return baseCustomRoll(id);if(serverPending)return;const c=CONFIG.cases.find(c=>c.id===id);if(!c)return;await serverDo('/api/case',{caseId:id,quantity:c.freeType?1:caseCount},r=>{lastCasePrizeIds=r.prizes.filter(p=>p.id).map(p=>p.id);serverWinners=r.prizes.map(p=>p.coin?CONFIG.coinRewards.find(i=>Math.round(i.value*100)===p.coin):itemById(p.item_id));baseCustomRoll(id);});};

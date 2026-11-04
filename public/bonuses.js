@@ -1,4 +1,6 @@
 /* Local bonuses and partner-only referrals. Real permissions move to the backend. */
+function bonusWindow(at=Date.now()){const msk=new Date(at+10800000);return {open:msk.getUTCDay()===6&&msk.getUTCHours()>=10&&msk.getUTCHours()<22};}
+function cashbackSnapshot(){return {...bonusWindow(),available:0,pending:0,claimed:0};}
 function bonusProfileId(){return String(window.Telegram?.WebApp?.initDataUnsafe?.user?.id||'demo');}
 function ensureBonusState(){
  state.partnerDirectory??={};state.cashback??={periods:{},claimed:0};
@@ -26,7 +28,7 @@ refTransfer=function(){if(!currentPartner())return toast('Доступно то�
 go=function(id){if(id==='referrals'&&!currentPartner())id='bonuses';return oldBonusGo(id);};
 renderBonuses=function(){
  ensureBonusState();const partner=currentPartner(),cash=cashbackSnapshot();
- return `${title('Бонусы','')}<div class="bonus-grid">${partner?`<button class="panel partner-entry" data-page="referrals"><span class="bonus-symbol">${icon('users')}</span><div><h2>Реферальный кабинет</h2><p>${esc(partner.code)}</p></div>${icon('chevron')}</button>`:''}<section class="panel cashback-panel"><div class="panel-heading"><h2>Кэшбэк</h2><span class="cashback-rate">5%</span></div><p class="subtle">С чистого проигрыша за неделю.</p><div class="bonus-money"><div><small>К получению</small><strong class="bonus-amount">${fmt(cash.available)} R</strong></div><div><small>За текущую неделю</small><strong class="bonus-amount">${fmt(cash.pending)} R</strong></div></div><button class="btn wide" data-bonus="cashback" ${cash.open&&cash.available>0?'':'disabled'}>Забрать кэшбэк</button><small class="bonus-schedule">По субботам, 10:00–22:00 МСК. Расчёт недели — в 10:00.</small></section><div class="bonus-giveaways-soon">Розыгрыши. <span>Скоро</span></div></div>`;
+ return `${title('Бонусы','')}<div class="bonus-grid">${partner?`<button class="panel partner-entry" data-page="referrals"><span class="bonus-symbol">${icon('users')}</span><div><h2>Реферальный кабинет</h2><p>${esc(partner.code)}</p></div>${icon('chevron')}</button>`:''}<section class="panel cashback-panel"><div class="panel-heading"><h2>Кэшбэк</h2><span class="cashback-rate">5%</span></div><p class="subtle">С чистого проигрыша за неделю.</p><div class="bonus-money"><div><small>К получению</small><strong class="bonus-amount">${fmt(cash.available)} R</strong></div><div><small>За текущую неделю</small><strong class="bonus-amount">${fmt(cash.pending)} R</strong></div></div><button class="btn wide" data-bonus="cashback" ${cash.open&&cash.available>0?'':'disabled'}>Забрать кэшбэк</button><small class="bonus-schedule">По субботам, 10:00–22:00 МСК. Расчёт недели — в 10:00.</small></section></div>`;
 };
 renderReferrals=function(){
  if(!currentPartner())return `${title('Партнёрский кабинет','')}<section class="panel"><p class="subtle">Доступ предоставляется администратором.</p><button class="btn secondary" data-page="bonuses">К бонусам</button></section>`;

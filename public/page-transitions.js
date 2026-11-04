@@ -5,10 +5,10 @@
  const order=['cases','upgrade','mines','dice','crash','inventory','bonuses','referrals','profile','admin','faq'];
  function clear(){running.forEach(a=>a.cancel());running=[];ghost?.remove();ghost=null;}
  go=function(id){
-  if(page===id||busy||mine.active||crash.active)return previousGo(id);
   clear();
+  if(page===id||busy||mine.active||crash.active)return previousGo(id);
   const main=document.querySelector('#main .page-in');
-  if(!main?.animate||matchMedia('(prefers-reduced-motion: reduce)').matches)return previousGo(id);
+  if(!main?.animate||matchMedia('(prefers-reduced-motion: reduce), (pointer: coarse), (max-width:700px)').matches)return previousGo(id);
   const direction=order.indexOf(id)>=order.indexOf(page)?1:-1;
   const rect=main.getBoundingClientRect();
   const distance=Math.max(280,Math.min(rect.width,innerWidth)*.94);
@@ -21,7 +21,7 @@
    Object.assign(ghost.style,{position:'fixed',top:rect.top+'px',left:rect.left+'px',width:rect.width+'px',height:Math.min(rect.height,innerHeight-Math.max(0,rect.top))+'px',margin:'0',boxSizing:'border-box',overflow:'hidden',pointerEvents:'none',zIndex:'30'});
    document.body.appendChild(ghost);
   }
-  previousGo(id);
+  try{previousGo(id);}catch(error){clear();throw error;}
   if(page!==id){clear();return;}
   const outgoing=ghost;
   if(outgoing){

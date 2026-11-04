@@ -18,7 +18,7 @@ filterCases=function(){
 caseControls=function(c){
  if(!c.freeType)return baseCustomControls(c);
  const status=freeCaseStatus(c),condition={subscribe:'Подписка на канал',username:'Telegram-юзернейм',referral:'Первый переход по чужой реферальной ссылке'}[c.freeType];
- return `<div class="free-case-condition"><strong>${condition}</strong><small>Демо: условие подтверждается вручную. Реальная проверка появится с бэкендом.</small>${!status.condition?`<button class="btn secondary" data-free-case-check="${c.id}">Подтвердить условие (демо)</button>`:''}</div><button class="btn wide" id="caseOpen" data-open="${c.id}" ${status.ready?'':'disabled'} ${status.next?`data-free-case-timer="${c.id}"`:''}>${esc(status.label)}</button>`;
+ return `<div class="free-case-condition"><strong>${condition}</strong><small></small>${!status.condition?`<button class="btn secondary" data-free-case-check="${c.id}">Подтвердить условие (демо)</button>`:''}</div><button class="btn wide" id="caseOpen" data-open="${c.id}" ${status.ready?'':'disabled'} ${status.next?`data-free-case-timer="${c.id}"`:''}>${esc(status.label)}</button>`;
 };
 openCase=function(id){if(busy)return baseCustomOpen(id);const c=CONFIG.cases.find(c=>c.id===id);if(!c)return;if(c.freeType){if(!lastCaseWasFree)previousPaidCount=caseCount;caseCount=1;lastCaseWasFree=true;}else if(lastCaseWasFree){caseCount=previousPaidCount;lastCaseWasFree=false;}baseCustomOpen(id);if(c.freeType){const price=document.querySelector('.case-opening-price');if(price)price.textContent='Бесплатно';}};
 settleCaseBatch=function(c,count){
