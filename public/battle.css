@@ -1,4 +1,5 @@
 /* Cameraman Battle: the original game interface, with a graphite / blue identity. */
+/* Best drop is the deliberate gold exception to the blue interface. */
 /* Layout and interaction polish, shared by desktop and Telegram mobile. */
 :root,html body{--ui-glow:#71adff!important;--dial-edge:#5e87b7!important;--motion-ease:cubic-bezier(.22,.65,.35,1)}
 html,body{overscroll-behavior:none;overflow-x:clip;max-width:100%;touch-action:pan-y}
@@ -32,3 +33,4 @@ body .btn:not(.secondary):not(.danger){background:linear-gradient(135deg,#438df3
 @media(max-width:700px){body .page-in{transform:none!important;animation:none!important}}
 body .modal:not([hidden])~.floating-game-action{z-index:115!important}
 body .balance-plus,body .chip.active,body .nav-item.active,body .mobile-nav button.active{background:linear-gradient(135deg,#306bba,#1b3964)!important}@media(hover:hover){body .balance-plus:hover,body .chip.active:hover,body .nav-item.active:hover{box-shadow:0 0 18px #428fff44!important}}
+html body .home-dashboard .home-drops .home-best.panel,html body .personal-record.panel{background:linear-gradient(135deg,#30291d,#1b1a1b)!important;border-color:#8b7040!important;box-shadow:inset 0 1px 0 #ffe1a325,0 0 20px #d5a54512!important}html body .home-best .panel-heading h3,html body .home-best .panel-heading h3 span,html body .home-best .drop-empty,html body .home-best .drop-info>span,html body .home-best .currency-value,html body .personal-record h3,html body .personal-record .currency-value{color:#f0cb79!important}html body .home-best .royal-crown{fill:#f0cb79!important;filter:drop-shadow(0 0 5px #f0cb7940)!important}

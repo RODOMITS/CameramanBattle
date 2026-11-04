@@ -13,7 +13,7 @@ function customCaseFoot(c){if(c.freeType){const status=freeCaseStatus(c);return 
 renderCases=function(){return baseCustomCasesView().replace(/<label class="search">[\s\S]*?<\/label>/,'');};
 filterCases=function(){
  const card=c=>`<button class="case-card custom-case-card" style="--accent:${c.accent}" data-case="${c.id}">${c.freeType?`<span class="tiny-tag">${c.freeType==='referral'?'Один раз':'Раз в 6 часов'}</span>`:c.category==='allin'?'<span class="tiny-tag">All-in</span>':''}<div class="case-art">${caseArt(c)}</div><h3>${esc(c.name)}</h3><div class="price-row">${customCaseFoot(c)}</div><div class="rarity-bar"></div></button>`;
- patchElementHTML($('#caseGrid'),CONFIG.caseGroups.map(([id,name])=>`<section class="custom-case-section" data-case-section="${id}"><div class="section-head"><h2>${name}</h2></div><div class="case-grid custom-case-grid">${CONFIG.cases.filter(c=>c.category===id).map(card).join('')}</div></section>`).join(''));
+ patchElementHTML($('#caseGrid'),CONFIG.caseGroups.map(([id,name])=>`<section class="custom-case-section" data-case-section="${id}"><div class="section-head"><h2>${name}</h2></div><div class="case-grid custom-case-grid">${CONFIG.cases.filter(c=>c.category===id).sort((a,b)=>casePrice(a)-casePrice(b)).map(card).join('')}</div></section>`).join(''));
 };
 caseControls=function(c){
  if(!c.freeType)return baseCustomControls(c);
