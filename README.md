@@ -4,6 +4,8 @@ Telegram Mini App для коллекции Cameraman Tower Defense: кейсы,
 
 Бот: https://t.me/cameraman_battle_bot · Новости: https://t.me/cameraman_battle
 
+Интерфейс использует исходную вёрстку и анимации Brainrot Rush с тёмной синей темой Cameraman Battle. Логотип, маскот Titan Cameraman, аватар, игровая монета и девять иконок кейсов нарисованы отдельно. Галерея и PNG для скачивания: `/brand.html`. Промпты и описание: `ARTWORK.md`.
+
 ## Запуск на BotHost
 
 1. Подключи этот репозиторий. Выбери сборку через Dockerfile, среду Node.js, а не Python.

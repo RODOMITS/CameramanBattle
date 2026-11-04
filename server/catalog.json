@@ -335,7 +335,7 @@
       "name": "Патруль",
       "price": 12,
       "category": "paid",
-      "image": "images/units/unit-28.webp",
+      "image": "images/cases/case-patrol.webp",
       "drops": [
         {
           "id": "unit-41",
@@ -381,14 +381,17 @@
           "id": "unit-31",
           "weight": 0.9064759639398494
         }
-      ]
+      ],
+      "accent": "#548dff",
+      "tier": 2,
+      "imageLarge": "images/cases/case-patrol.webp"
     },
     {
       "id": "case-reinforcement",
       "name": "Подкрепление",
       "price": 50,
       "category": "paid",
-      "image": "images/units/unit-33.webp",
+      "image": "images/cases/case-reinforcement.webp",
       "drops": [
         {
           "id": "unit-41",
@@ -430,14 +433,17 @@
           "id": "unit-27",
           "weight": 0.9012646389059582
         }
-      ]
+      ],
+      "accent": "#548dff",
+      "tier": 2,
+      "imageLarge": "images/cases/case-reinforcement.webp"
     },
     {
       "id": "case-laboratory",
       "name": "Лаборатория",
       "price": 200,
       "category": "paid",
-      "image": "images/units/unit-23.webp",
+      "image": "images/cases/case-laboratory.webp",
       "drops": [
         {
           "id": "unit-40",
@@ -487,14 +493,17 @@
           "id": "unit-17",
           "weight": 0.9224062482441828
         }
-      ]
+      ],
+      "accent": "#548dff",
+      "tier": 2,
+      "imageLarge": "images/cases/case-laboratory.webp"
     },
     {
       "id": "case-titan",
       "name": "Протокол Titan",
       "price": 800,
       "category": "paid",
-      "image": "images/units/unit-39.webp",
+      "image": "images/cases/case-titan.webp",
       "drops": [
         {
           "id": "unit-41",
@@ -540,14 +549,17 @@
           "id": "unit-09",
           "weight": 0.22291630667445708
         }
-      ]
+      ],
+      "accent": "#548dff",
+      "tier": 2,
+      "imageLarge": "images/cases/case-titan.webp"
     },
     {
       "id": "case-engineer",
       "name": "Инженерный корпус",
       "price": 2000,
       "category": "paid",
-      "image": "images/units/unit-09.webp",
+      "image": "images/cases/case-engineer.webp",
       "drops": [
         {
           "id": "unit-41",
@@ -589,14 +601,17 @@
           "id": "unit-02",
           "weight": 0.00125519946945208
         }
-      ]
+      ],
+      "accent": "#548dff",
+      "tier": 2,
+      "imageLarge": "images/cases/case-engineer.webp"
     },
     {
       "id": "case-signed",
       "name": "DevSigned",
       "price": 6500,
       "category": "paid",
-      "image": "images/units/unit-01.webp",
+      "image": "images/cases/case-signed.webp",
       "drops": [
         {
           "id": "unit-41",
@@ -642,7 +657,10 @@
           "id": "unit-01",
           "weight": 0.00019859376878446816
         }
-      ]
+      ],
+      "accent": "#548dff",
+      "tier": 2,
+      "imageLarge": "images/cases/case-signed.webp"
     },
     {
       "id": "case-subscribe",
@@ -650,7 +668,7 @@
       "price": 0,
       "freeType": "subscribe",
       "category": "free",
-      "image": "images/units/unit-35.webp",
+      "image": "images/cases/case-subscribe.webp",
       "drops": [
         {
           "id": "unit-41",
@@ -668,7 +686,10 @@
           "id": "unit-32",
           "weight": 0.02384747136124272
         }
-      ]
+      ],
+      "accent": "#548dff",
+      "tier": 2,
+      "imageLarge": "images/cases/case-subscribe.webp"
     },
     {
       "id": "case-username",
@@ -676,7 +697,7 @@
       "price": 0,
       "freeType": "username",
       "category": "free",
-      "image": "images/units/unit-35.webp",
+      "image": "images/cases/case-username.webp",
       "drops": [
         {
           "id": "unit-41",
@@ -694,7 +715,10 @@
           "id": "unit-32",
           "weight": 0.02384747136124272
         }
-      ]
+      ],
+      "accent": "#548dff",
+      "tier": 2,
+      "imageLarge": "images/cases/case-username.webp"
     },
     {
       "id": "case-referral",
@@ -702,7 +726,7 @@
       "price": 0,
       "freeType": "referral",
       "category": "free",
-      "image": "images/units/unit-35.webp",
+      "image": "images/cases/case-referral.webp",
       "drops": [
         {
           "id": "unit-41",
@@ -720,7 +744,10 @@
           "id": "unit-32",
           "weight": 0.02384747136124272
         }
-      ]
+      ],
+      "accent": "#548dff",
+      "tier": 2,
+      "imageLarge": "images/cases/case-referral.webp"
     }
   ],
   "coinRewards": []

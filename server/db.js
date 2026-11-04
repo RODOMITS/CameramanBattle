@@ -32,7 +32,7 @@ export function openStore(path){
  tx(()=>{
  const brand=setting('projectBrand');if(brand&&brand!=='cameraman-battle')throw new Error('Нужна отдельная база Cameraman Battle');if(!brand&&get('SELECT COUNT(*) n FROM users').n)throw new Error('Используй новую базу Cameraman Battle, база старого проекта несовместима');set('projectBrand','cameraman-battle');
  for(const i of catalog.items)run('INSERT OR IGNORE INTO items(id,name,price,image,tier,deposit,withdraw) VALUES(?,?,?,?,?,?,?)',i.id,i.name,cents(i.value),i.imageSmall||i.image,i.tier,Number(acceptedNames.some(n=>normalize(n)===normalize(i.name))),Number(withdrawNames.includes(i.name)));
- for(const c of catalog.cases)run('INSERT OR IGNORE INTO cases(id,data) VALUES(?,?)',c.id,JSON.stringify(c));
+ for(const c of catalog.cases){run('INSERT OR IGNORE INTO cases(id,data) VALUES(?,?)',c.id,JSON.stringify(c));run("UPDATE cases SET data=json_set(data,'$.image',?,'$.imageLarge',?,'$.accent',?) WHERE id=? AND (json_extract(data,'$.image')!=? OR json_extract(data,'$.imageLarge') IS NULL)",c.image,c.imageLarge||c.image,c.accent||'#5794f7',c.id,c.image);}
  if(!get("SELECT key FROM settings WHERE key='economy'"))set('economy',{upgradeEdge:.08,partnerPercent:5,depositBonus:0,freeMode:'recent_deposit',cashbackPercent:5});
  });
  return {db,all,get,run,tx,set,setting};
