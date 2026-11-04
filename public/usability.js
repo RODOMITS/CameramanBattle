@@ -1,7 +1,7 @@
 /* Selection, result actions, privacy and small-image support for the local demo. */
 const MAX_STAKE_ITEMS=5;
 let stakes={upgrade:[],dice:[]},bulkMode=false,bulkIds=new Set(),pendingSale=null,lastCasePrizeIds=[];
-const uiPrefs=(()=>{try{return{streamer:false,floatingButton:true,lastPreset:null,diceColor:1,...JSON.parse(localStorage.getItem('rot-ui-preferences')||'{}')}}catch{return{streamer:false,floatingButton:true,lastPreset:null,diceColor:1}}})();
+const uiPrefs=(()=>{try{return{streamer:false,floatingButton:false,lastPreset:null,diceColor:1,...JSON.parse(localStorage.getItem('rot-ui-preferences')||'{}')}}catch{return{streamer:false,floatingButton:false,lastPreset:null,diceColor:1}}})();
 if(Number.isInteger(uiPrefs.diceColor)&&uiPrefs.diceColor>=0&&uiPrefs.diceColor<6)diceColor=uiPrefs.diceColor;
 function saveUIPrefs(){try{localStorage.setItem('rot-ui-preferences',JSON.stringify(uiPrefs))}catch{}}
 function applyStreamer(){document.documentElement.classList.toggle('streamer-on',!!uiPrefs.streamer);}
@@ -44,3 +44,4 @@ showPreferences=function(){originalPrefsView();const row=`<div class="preference
 render=function(){cleanSelections();stableRender();applyStreamer();$$('[data-quick],[data-mult]').forEach(b=>{const current=b.dataset.mult?'x'+b.dataset.mult:b.dataset.quick;b.classList.toggle('active',current===uiPrefs.lastPreset);b.setAttribute('aria-pressed',String(current===uiPrefs.lastPreset));});};
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;const d=b.dataset;if(d.color!==undefined){uiPrefs.diceColor=Number(d.color);saveUIPrefs();}if(d.bulkId){if(bulkIds.has(d.bulkId))bulkIds.delete(d.bulkId);else bulkIds.add(d.bulkId);render();return;}if(d.confirmSale){commitSale(d.confirmSale);return;}switch(d.tools){case'bulk-mode':bulkMode=!bulkMode;bulkIds.clear();render();break;case'select-all':bulkIds=new Set(state.inventory.map(i=>i.uid));render();break;case'bulk-sell':confirmSale([...bulkIds]);break;case'keep-drop':closeModal();break;case'upgrade-drop':sendToUpgrade(lastCasePrizeIds);break;case'sell-drop':{const ids=lastCasePrizeIds.filter(id=>state.inventory.some(i=>i.uid===id));if(ids.length===1)sell(ids[0]);else confirmSale(ids);break;}case'floating-button':uiPrefs.floatingButton=uiPrefs.floatingButton===false;saveUIPrefs();b.classList.toggle('on',uiPrefs.floatingButton);b.setAttribute('aria-checked',String(uiPrefs.floatingButton));break;case'streamer':uiPrefs.streamer=!uiPrefs.streamer;saveUIPrefs();applyStreamer();b.classList.toggle('on',uiPrefs.streamer);b.setAttribute('aria-checked',String(uiPrefs.streamer));break;}});
 applyStreamer();render();
+
