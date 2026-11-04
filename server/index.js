@@ -1,4 +1,5 @@
 import http from 'node:http';
+import {createWelcome} from './welcome.js';
 import {depositQueueStatus} from './deposit-queue.js';
 import {createMaintenance} from './maintenance.js';
 import {gzipSync} from 'node:zlib';
@@ -17,8 +18,9 @@ if(dev&&process.env.NODE_ENV==='production')throw new Error('DEV_MODE запре
 const token=process.env.BOT_TOKEN||'',adminId=Number(process.env.ADMIN_ID||8911524524),port=Number(process.env.PORT||3000);
 if(!dev&&!token)throw new Error('Укажи BOT_TOKEN в переменных окружения');
 const store=openStore(process.env.DATABASE_PATH||'./data/cameraman.db');
-async function telegram(method,body){check(token,'Telegram не подключён');const response=await fetch(`https://api.telegram.org/bot${token}/${method}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(method==='getUpdates'?35000:12000)});const data=await response.json();check(data.ok,data.description||'Ошибка Telegram');return data.result;}
+async function telegram(method,body){check(token,'Telegram не подключён');const multipart=body instanceof FormData;const response=await fetch(`https://api.telegram.org/bot${token}/${method}`,{method:'POST',headers:multipart?{}:{'Content-Type':'application/json'},body:multipart?body:JSON.stringify(body),signal:AbortSignal.timeout(method==='getUpdates'?35000:method==='sendPhoto'?30000:12000)});const data=await response.json();check(data.ok,data.description||'Ошибка Telegram');return data.result;}
 const e=createEngine(store,{telegram}),{get,all,run,tx,set,setting}=store;
+const sendWelcome=createWelcome(store,telegram,process.env.PUBLIC_URL);
 const maintenance=createMaintenance(store);
 const fairness=createFairness(store,e),stats=createStats(store),bootId=randomUUID(),avatarCache=new Map(),staticCache=new Map();
 const routes={
@@ -84,7 +86,7 @@ setInterval(()=>{try{tx(()=>{e.tick();});}catch(err){console.error('Scheduler:',
 let stopped=false;
 async function onUpdate(u){
  const m=u.message;if(!m)return;
- if(m.text?.startsWith('/start')){const arg=m.text.split(/\s+/)[1]||'';tx(()=>e.login({...m.from,start_param:arg}));await telegram('sendMessage',{chat_id:m.chat.id,text:'Cameraman Battle — кейсы и коллекция. Открывай приложение 👇',reply_markup:{inline_keyboard:[[{text:'Открыть Cameraman Battle',web_app:{url:process.env.PUBLIC_URL}}]]}});}
+ if(/^\/start(?:@\w+)?(?:\s|$)/.test(m.text||'')){const arg=m.text.split(/\s+/)[1]||'';tx(()=>e.login({...m.from,start_param:arg}));await sendWelcome(m.chat.id);}
  if(m.text==='/paysupport'||m.text==='/support')await telegram('sendMessage',{chat_id:m.chat.id,text:'Помощь по платежам: отправь описание проблемы и идентификатор платежа командой /support ТЕКСТ. Владелец рассмотрит обращение.'});
  else if(m.text?.startsWith('/support ')){await telegram('sendMessage',{chat_id:adminId,text:`Обращение от ${m.from.id}:\n${m.text.slice(9,3000)}`});await telegram('sendMessage',{chat_id:m.chat.id,text:'Обращение передано владельцу.'});}
 }
